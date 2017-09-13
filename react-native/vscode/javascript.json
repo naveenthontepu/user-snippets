@@ -1,4 +1,9 @@
 {
+	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
 	"Print to console": {
 		"prefix": "log",
 		"body": [
@@ -15,8 +20,9 @@
 				"\tView,",
 				"\tText,",
 			"} from 'react-native';",
+			"",
 			"class $TM_FILENAME extends Component {",
-				"\trender(){",
+				"\trender() {",
 					"\t\treturn (",
 						"\t\t\t<View>",
 							"\t\t\t\t<Text>hello world</Text>",
@@ -24,7 +30,8 @@
 					"\t\t);",
 				"\t}",
 			"}",
-			"export default $TM_FILENAME;"
+			"export default $TM_FILENAME;",
+			""
 		],
 		"description": "Log output to console"
 	},
@@ -37,8 +44,9 @@
 				"\tText,",
 			"} from 'react-native';",
 			"import { connect } from 'react-redux';",
+			"",
 			"class $TM_FILENAME extends Component {",
-				"\trender(){",
+				"\trender() {",
 					"\t\treturn (",
 						"\t\t\t<View>",
 							"\t\t\t\t<Text>hello world</Text>",
@@ -47,11 +55,12 @@
 				"\t}",
 			"}",
 			"",
-			"const mapToProps = ({$1})=>{",
-				"\tconst{ $2 } = $1;",
-				"\treturn {$2};",
+			"const mapToProps = ({ $1 }) => {",
+				"\tconst { $2 } = $1;",
+				"\treturn { $2 };",
 			"}",	
-			"export default connect(mapToProps)($TM_FILENAME);"
+			"export default connect(mapToProps)($TM_FILENAME);",
+			""
 		],
 		"description": "Log output to console"
 	},
@@ -69,7 +78,7 @@
 		"prefix": "taction",
 		"body": [
 			"export const $1 = ($2) => {",
-				"\treturn (dispatch)=>{",
+				"\treturn (dispatch) => {",
 				"\t}",
 			"}"
 		],
@@ -82,7 +91,7 @@
 			"import { createNewState } from './ReducerUtil';",
 			"const INITIAL_STATE = {",
 			"}",
-			"export default (state = INITIAL_STATE, action)=>{",
+			"export default (state = INITIAL_STATE, action) => {",
 				"\tswitch (action.type) {",
 					"\t\tcase types.$1:",
 					"\t\t\treturn createNewState(state,{$2: action.payload});",
